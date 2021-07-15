@@ -5,11 +5,11 @@
   background-color: black !important;
 }
 
-.nav-link{
+.nav-link {
   color: white !important;
 }
 
-#logo{
+#logo {
   float: left;
   font-size: 1.7em;
   color: white;
@@ -18,11 +18,11 @@
   font-weight: bold;
 }
 
-#home-container{
+#home-container {
   padding-top: 1.7em;
 }
 
-.jumbotron{
+.jumbotron {
   background-image: asset-url('home-image.jpg');
   background-position: center;
   background-repeat: no-repeat;
@@ -36,7 +36,7 @@ body {
 
 #page-content {
   flex: 1 0 auto;
-  background-color: gray;
+  background-color: lightgray;
 }
 
 #sticky-footer {
