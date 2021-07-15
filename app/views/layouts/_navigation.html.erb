@@ -6,10 +6,6 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <%# <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> %>
-        <%= link_to "Articles", articles_path, class: "nav-link"%>
-      </li>
       <li class="nav-item">
         <a class="nav-link" href="#">About</a>
       </li>
@@ -18,10 +14,8 @@
           Articles
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Latest</a>
-          <a class="dropdown-item" href="#">Trending</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">All</a>
+          <%= link_to "Create a article", new_article_path, class:"dropdown-item" %>
+          <%= link_to "View all articles", articles_path, class:"dropdown-item" %>
         </div>
       </li>
       <li class="nav-item">
