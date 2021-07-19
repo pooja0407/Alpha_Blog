@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
   def new
     @user = User.new
   end
@@ -13,6 +14,19 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    if (@user.update(user_params))
+      flash[:notice] = "User profile updated successfully!"
+      redirect_to articles_path
+    else
+      render 'edit' #edit.html.erb
+    end
+  end
 
   private
 
