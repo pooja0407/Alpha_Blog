@@ -8,4 +8,11 @@ helper_method :current_user, :logged_in?
   def logged_in?
     !!current_user
   end
+
+  def require_user
+    if !logged_in?
+      flash[:alert] = "You must be logged in to perform this task"
+      redirect_to login_path
+    end
+  end
 end
